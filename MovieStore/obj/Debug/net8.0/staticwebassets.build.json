@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "3QAzoOaQUM7lSBQEf/z/psEO4VsDXAWvIGjJKwCEvXo=",
+  "Source": "MovieStore",
+  "BasePath": "_content/MovieStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MovieStore\\wwwroot",
+      "Source": "MovieStore",
+      "ContentRoot": "C:\\Users\\ElmaDina\\source\\repos\\MovieStore\\MovieStore\\MovieStore\\wwwroot\\",
+      "BasePath": "_content/MovieStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
