@@ -7,6 +7,8 @@ namespace MovieStore.Repositories.Abstract
 		Task<StatusModel> LoginAsync(LoginModel model);
 		Task<StatusModel> RegistrationAsync(RegistrationModel model);
 		Task LogoutAsync();
-	}
+        Task<StatusModel> ChangePasswordAsync(ChangePasswordModel model, string username);
+
+    }
 }
  

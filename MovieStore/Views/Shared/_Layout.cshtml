@@ -30,12 +30,15 @@
                     {
                         <li><a href="/Admin/Display">Admin</a></li>
                     }
-
+                    @if (!string.IsNullOrEmpty(User.Identity.Name))
+                    {
+                        <li><a href="/UserAuthentication/ChangePassword">ChangePassword</a></li>
+                        <li><a href="/UserAuthentication/Logout">Logout</a></li>
+                    }
                     <li><a href="/forms.html">Form</a></li>
                     <li><a href="/table.html">Table</a></li>
                 <li><a href="/movie-detail.html">Movie Detail</a></li>
                 <li><a href="#">Link 4</a></li>
-                <li><a href="/UserAuthentication/Logout">Logout</a></li>
             </ul>
           </li> 
           <li><a href="#">Login</a></li>

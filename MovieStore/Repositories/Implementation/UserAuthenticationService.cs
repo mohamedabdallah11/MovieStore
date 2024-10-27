@@ -110,5 +110,30 @@ namespace MovieStore.Repositories.Implementation
 			status.Message = "User Created Sucessfully";
 			return status;
 		}
-	}
+        public async Task<StatusModel> ChangePasswordAsync(ChangePasswordModel model, string username)
+        {
+            var status = new StatusModel();
+
+            var user = await userManager.FindByNameAsync(username);
+            if (user == null)
+            {
+                status.Message = "User does not exist";
+                status.StatusCode = 0;
+                return status;
+            }
+            var result = await userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                status.Message = "Password has updated successfully";
+                status.StatusCode = 1;
+            }
+            else
+            {
+                status.Message = "Some error occcured";
+                status.StatusCode = 0;
+            }
+            return status;
+
+        }
+    }
 }
