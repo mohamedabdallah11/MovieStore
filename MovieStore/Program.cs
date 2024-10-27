@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieStore.Models.Domain;
 using MovieStore.Repositories.Abstract;
+using MovieStore.Repositories.Implementation;
 
 namespace MovieStore
 {
@@ -17,7 +18,7 @@ namespace MovieStore
             builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
                 .AddEntityFrameworkStores<DataBaseContext>().AddDefaultTokenProviders();
             builder.Services.ConfigureApplicationCookie(op => op.LoginPath = "/UserAuthentication/Login");
-            builder.Services.AddScoped<IUserAuthenticationService, IUserAuthenticationService>();
+            builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -38,7 +39,7 @@ namespace MovieStore
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=UserAuthentication}/{action=Login}/{id?}");
 
             app.Run();
         }
