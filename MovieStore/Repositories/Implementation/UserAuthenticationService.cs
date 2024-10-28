@@ -34,7 +34,7 @@ namespace MovieStore.Repositories.Implementation
 				status.Message = "Invalid Password";
 				return status;
 			}
-			var signInResult = await signInManager.PasswordSignInAsync(user, model.Password, false, true);
+			var signInResult = await signInManager.PasswordSignInAsync(user, model.Password,model.RememberMe, true);
 			if (signInResult.Succeeded)
 			{
 				var userRoles = await signInManager.UserManager.GetRolesAsync(user);
@@ -88,6 +88,7 @@ namespace MovieStore.Repositories.Implementation
 				Email = model.Email,
 				UserName = model.UserName,
 				EmailConfirmed = true,
+			
 			};
 			var result = await userManager.CreateAsync(user, model.Password);
 

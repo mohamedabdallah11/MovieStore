@@ -73,6 +73,10 @@ button {
             <span asp-validation-for="Password" class="err"></span>
             </div>
 
+            <div class="remember-me">
+                <input type="checkbox" asp-for="RememberMe">
+                <label asp-for="RememberMe">Remember Me</label>
+            </div>
 
     @if(TempData["msg"]!=null){
                 <div class="msg">@TempData["msg"]</div>

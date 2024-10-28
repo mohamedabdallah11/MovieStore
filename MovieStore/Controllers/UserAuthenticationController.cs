@@ -20,6 +20,7 @@ namespace MovieStore.Controllers
 		}
 
 		[HttpPost]
+        [ValidateAntiForgeryToken]
 		public async Task<IActionResult> Login(LoginModel model)
 		{
 			if(!ModelState.IsValid)
@@ -43,7 +44,9 @@ namespace MovieStore.Controllers
             return View();
         }
         [HttpPost]
-		public async Task<IActionResult> Registration(RegistrationModel model)
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Registration(RegistrationModel model)
 		{
 			if (!ModelState.IsValid)
 			{

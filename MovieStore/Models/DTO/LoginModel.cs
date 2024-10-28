@@ -2,11 +2,14 @@
 
 namespace MovieStore.Models.DTO
 {
-	public class LoginModel
-	{
+    public class LoginModel
+    {
         [Required]
         public String UserName { get; set; }
-		[Required]
+        [Required]
+        [DataType(DataType.Password)]
 		public String Password { get; set; }
+        public bool RememberMe { get; set; }
+
     }
 }
