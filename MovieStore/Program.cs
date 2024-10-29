@@ -24,6 +24,7 @@ namespace MovieStore
             builder.Services.ConfigureApplicationCookie(op => op.LoginPath = "/UserAuthentication/Login");
             builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
             builder.Services.AddScoped<IGenreService, GenreService>();
+            builder.Services.AddScoped<IFileService, FileService>();
             //
 
             var app = builder.Build();
