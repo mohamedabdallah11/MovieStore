@@ -88,6 +88,7 @@ namespace MovieStore.Repositories.Implementation
 				Email = model.Email,
 				UserName = model.UserName,
 				EmailConfirmed = true,
+				PhoneNumberConfirmed = true,
 			
 			};
 			var result = await userManager.CreateAsync(user, model.Password);

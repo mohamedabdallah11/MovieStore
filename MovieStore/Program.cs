@@ -14,12 +14,18 @@ namespace MovieStore
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //
             builder.Services.AddDbContext<DataBaseContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
             builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
                 .AddEntityFrameworkStores<DataBaseContext>().AddDefaultTokenProviders();
+
             builder.Services.ConfigureApplicationCookie(op => op.LoginPath = "/UserAuthentication/Login");
             builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+            builder.Services.AddScoped<IGenreService, GenreService>();
+            //
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -34,7 +40,11 @@ namespace MovieStore
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            //
             app.UseAuthentication();
+            //
+
 
             app.UseAuthorization();
 

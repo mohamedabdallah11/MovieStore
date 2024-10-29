@@ -7,10 +7,10 @@ namespace MovieStore.Controllers
 {
 	public class UserAuthenticationController : Controller
 	{
-		private readonly IUserAuthenticationService _service;
-        public UserAuthenticationController(IUserAuthenticationService service)
+		private readonly IUserAuthenticationService authService;
+        public UserAuthenticationController(IUserAuthenticationService authService)
         {
-			this._service = service;
+			this.authService = authService;
         }
 
         public IActionResult Login()
@@ -27,10 +27,10 @@ namespace MovieStore.Controllers
 			{
 				return View(model);
 			}
-			var result =await _service.LoginAsync(model);
+			var result =await authService.LoginAsync(model);
 			if(result.StatusCode==1)
 			{
-				return RedirectToAction("Display","Dashboard");
+				return RedirectToAction("Index","Home");
 			}
 			else
 			{
@@ -53,7 +53,7 @@ namespace MovieStore.Controllers
 				return View(model);
 			}
 			model.Role = "user";
-			var result = await _service.RegistrationAsync(model);
+			var result = await authService.RegistrationAsync(model);
 			TempData["msg"] = result.Message;
 			return RedirectToAction(nameof(Registration));
 
@@ -61,7 +61,7 @@ namespace MovieStore.Controllers
 
         public async Task<IActionResult> Logout()
 		{
-			await _service.LogoutAsync();
+			await authService.LogoutAsync();
 			return RedirectToAction(nameof(Login));
 		}
         //public async Task<IActionResult> RegisterAdmin()
@@ -74,7 +74,7 @@ namespace MovieStore.Controllers
         //		Password = "Admin@12345#"  
         //	};
         //          model.Role = "admin";
-        //          var result = await _service.RegistrationAsync(model);
+        //          var result = await authService.RegistrationAsync(model);
         //          return Ok(result);
 
         //      }
@@ -90,7 +90,7 @@ namespace MovieStore.Controllers
         {
             if (!ModelState.IsValid)
                 return View(model);
-            var result = await _service.ChangePasswordAsync(model, User.Identity.Name);
+            var result = await authService.ChangePasswordAsync(model, User.Identity.Name);
             TempData["msg"] = result.Message;
             return RedirectToAction(nameof(ChangePassword));
         }
