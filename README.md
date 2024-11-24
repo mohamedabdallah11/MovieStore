@@ -16,6 +16,7 @@ An MVC-based web application for managing a movie store, built with C# and ASP.N
 - **Database**: SQL Server 
 - **ORM**: Entity Framework
 - **Frontend**: Razor Views, HTML, CSS
+- **Querying**: LINQ (Language Integrated Query)
 
 
 ## 📂 Project Structure
