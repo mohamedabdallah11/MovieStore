@@ -13,13 +13,10 @@ An MVC-based web application for managing a movie store, built with C# and ASP.N
 
 ## 🛠️ Technologies Used
 - **Framework**: ASP.NET (C#)
-- **Database**: SQL Server (or your preferred database)
+- **Database**: SQL Server 
 - **ORM**: Entity Framework
-- **Frontend**: Razor Views, HTML5, CSS3
-- **Libraries/Tools**:
-  - AutoMapper (for mapping DTOs)
-  - Pagination library (if any)
-  - Other .NET built-in libraries
+- **Frontend**: Razor Views, HTML, CSS
+
 
 ## 📂 Project Structure
 
