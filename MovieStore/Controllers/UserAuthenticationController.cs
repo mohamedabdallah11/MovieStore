@@ -66,18 +66,18 @@ namespace MovieStore.Controllers
 		}
         //public async Task<IActionResult> RegisterAdmin()
         //{
-        //	var model = new RegistrationModel
-        //	{
-        //		UserName = "admin",
-        //		Name = "mohamed",
-        //		Email = "mohamed@gmail.com",
-        //		Password = "Admin@12345#"  
-        //	};
-        //          model.Role = "admin";
-        //          var result = await authService.RegistrationAsync(model);
-        //          return Ok(result);
+        //    var model = new RegistrationModel
+        //    {
+        //        UserName = "pop",
+        //        Name = "pop",
+        //        Email = "pop@gmail.com",
+        //        Password = "Mm@5610292"
+        //    };
+        //    model.Role = "admin";
+        //    var result = await authService.RegistrationAsync(model);
+        //    return Ok(result);
 
-        //      }
+        //}
         [Authorize]
         public IActionResult ChangePassword()
         {

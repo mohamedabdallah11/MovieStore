@@ -25,6 +25,7 @@ namespace MovieStore
             builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
             builder.Services.AddScoped<IGenreService, GenreService>();
             builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IMovieService, MovieSerivce>();
             //
 
             var app = builder.Build();
