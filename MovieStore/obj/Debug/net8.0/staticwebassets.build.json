@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tr+LV/JS36zLM6HValey8u5JQFRimEPPV3Tpyw/ifj8=",
+  "Hash": "lAbZghx1nTGTLJ7u8nZyM/TI9ZX3J4/wwk/b/YT28Es=",
   "Source": "MovieStore",
   "BasePath": "_content/MovieStore",
   "Mode": "Default",
@@ -680,6 +680,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\9f10e430-4626-4418-b90f-cbc62235da80.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ElmaDina\\source\\repos\\MovieStore\\MovieStore\\MovieStore\\wwwroot\\Uploads\\aae8935f-ae70-4cc3-b571-5299332ea039.jpg",
+      "SourceId": "MovieStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ElmaDina\\source\\repos\\MovieStore\\MovieStore\\MovieStore\\wwwroot\\",
+      "BasePath": "_content/MovieStore",
+      "RelativePath": "Uploads/aae8935f-ae70-4cc3-b571-5299332ea039.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\aae8935f-ae70-4cc3-b571-5299332ea039.jpg"
     },
     {
       "Identity": "C:\\Users\\ElmaDina\\source\\repos\\MovieStore\\MovieStore\\MovieStore\\wwwroot\\Uploads\\b98a394a-2d1a-447f-8a06-46f21d5b4504.jpg",
